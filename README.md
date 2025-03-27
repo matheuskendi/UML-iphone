@@ -1,1 +1,27 @@
-https://www.mermaidchart.com/raw/3281c34d-3d60-402d-b5fb-1cc927de16df?theme=light&version=v0.1&format=svg
+## Diagrama de Classes
+
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica: String)
+    }
+    class AparelhoTelefonico {
+        +ligar(numero: String)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+    class NavegadorInternet {
+        +exibirPagina(url: String)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+    class iPhone {
+        +ReprodutorMusical
+        +AparelhoTelefonico
+        +NavegadorInternet
+    }
+    iPhone --> ReprodutorMusical
+    iPhone --> AparelhoTelefonico
+    iPhone --> NavegadorInternet
